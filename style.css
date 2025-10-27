@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF6D8;
+    text-align: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Bank.jpg);
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 40px;
+}
+header h1{
+    font-weight: lighter;
+}
+.title h1{
+    font-size: 60px;
+    font-weight: lighter;
+}

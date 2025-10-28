@@ -1,0 +1,67 @@
+body{
+    background-color: #FFF6D8;
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Bank.jpg);
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 40px;
+
+}
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("Bank.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  z-index: -1;
+}
+input[type=radio]{
+    display:none;
+}
+label{
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    margin: 30px;
+    cursor: pointer;
+    transition: all 600ms;
+}
+input[type=radio]:checked + label{
+    background-color: wheat;
+    box-shadow: 5px 5px ;
+}
+footer{
+    background-color: orange;
+}
+.bord{
+    width: 400px;
+    display: none;
+    overflow: hidden;   
+    background-color: white;
+    border: 3px solid black;
+    box-shadow: 10px 10px black;
+    padding: 10px 10px;
+    border-radius: 15px;
+    text-align: start;
+    margin-top: 30px;
+}
+.hi{
+    background-color: rgb(255, 100, 100);
+    box-shadow: 10px 10px red;
+    padding: 30px 30px;
+    border-radius: 15px;
+}

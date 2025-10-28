@@ -10,6 +10,9 @@ const output_3 = document.getElementById("type");
 const output_4 = document.getElementById("total");
 const output_5 = document.getElementById("payment");
 const output_6 = document.getElementById("intrest");
+const bord = document.querySelector('.bord');
+bord.style.display = 'block';
+bord.classList.add('show');
 if(selected){
 const loanType = selected.value;
 switch(loanType){
@@ -26,14 +29,16 @@ switch(loanType){
         totalRepayment = mensualite * y;
 
 
-        if(mensualite > z * 0.4){
+        if(mensualite > z * 0.4 ){
             output.textContent = "Your too Broke Change Something"
             output_3.textContent = "" ;
             output_2.textContent = "" ;
             output_5.textContent = "" ;
             output_6.textContent = "" ;
             output_4.textContent = "";
-            output.textContent = "Your too Broke Change Something"
+        }
+        else if(!x || !y || !z){
+            output.textContent = "Something is wrong"
         }
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
@@ -67,6 +72,9 @@ switch(loanType){
             output_5.textContent = "" ;
             output_6.textContent = "" ;
             output_4.textContent = "";
+        }
+        else if(!x || !y || !z){
+            output.textContent = "Something is wrong"
         }
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
@@ -102,6 +110,9 @@ switch(loanType){
             output_4.textContent = "";
             output.textContent = "Your too Broke Change Something"
         }
+        else if(!x || !y || !z){
+            output.textContent = "Something is wrong"
+        }
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
         output_2.textContent = "Loan ammount Is :" + x;
@@ -136,6 +147,9 @@ switch(loanType){
             output_4.textContent = "";
             output.textContent = "Your too Broke Change Something"
         }
+        else if(!x || !y || !z){
+            output.textContent = "Something is wrong"
+        }
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
         output_2.textContent = "Loan ammount Is :" + x;
@@ -165,6 +179,9 @@ switch(loanType){
             
             output.textContent = "Your too Broke Change Something"
         }
+        else if(!x || !y || !z){
+            output.textContent = "Something is wrong"
+        }
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
         output_2.textContent = "Loan ammount Is :" + x;
@@ -180,5 +197,6 @@ switch(loanType){
 
 else{
     output.textContent = "Please Select an option";
+    return;
 }
 }

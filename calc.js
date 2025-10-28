@@ -12,7 +12,6 @@ const output_5 = document.getElementById("payment");
 const output_6 = document.getElementById("intrest");
 const bord = document.querySelector('.bord');
 bord.style.display = 'block';
-bord.classList.add('show');
 if(selected){
 const loanType = selected.value;
 switch(loanType){

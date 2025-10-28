@@ -6,8 +6,10 @@
     <title>Bank calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="w-full h-screen bg-yellow-100 text-center">
     <header>
+        <h1 class="text-4xl text-blue-600 text-center mt-10">Tailwind is working!</h1>
+
         <h1>Welcome to you’re Bank</h1>
     </header>
     <div class="title">
@@ -15,16 +17,41 @@
         <h4>This Program Is Used To help You Determine If its Possible For to Pay you’re Lone In Time Or Not</h4>
     </div>
     <div class="Card">
-        <form>
-
-        </form>
+            <div class="loanType">
+            <input type="radio" name="loan" id="house" value="house">
+            <label for="house"><span>House</span></label>
+            <input type="radio" name="loan" id="appartment" value="appartment">
+            <label for="appartment"><span>Appartment</span></label>
+            <input type="radio" name="loan" id="land" value="land">
+            <label for="land"><span>Land</span></label>
+            <input type="radio" name="loan" id="project" value="project">
+            <label for="project"><span>Projects</span></label>
+            <input type="radio" name="loan" id="personal" value="personal">
+            <label for="personal"><span>Personal</span></label>
+            </div>
+            <div class="flex flex-col justify-center items-center ">
+            <input type="number" id="loan" required>
+            <input type="number" id="duration" required>
+            <input type="number" id="salary" required>
+            <button onclick="myfunction()">Calculat</button>
+            </div>
     </div>
-    <footer>
+    <div class="mt-8 text-center space-y-2">
+    <p id="type"></p>
+    <p id="ammount"></p>
+    <p id="intrest"></p>
+    <p id="payment"></p>
+    <p id="number"></p>
+    <p id="total"></p>
+    </div>
+    <footer class="bg-yellow-300 flex justify-center items-center flex-col h-40 mt-24">
         <div>
             <h4>Bank lone caculator</h4>
             <h5>We are here to give you our assistances and advice</h5>
             <p>By youcode and darhamza</p>
         </div>
     </footer>
+     <script src="calc.js"></script>
 </body>
+
 </html>

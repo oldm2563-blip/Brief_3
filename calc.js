@@ -12,6 +12,25 @@ const output_5 = document.getElementById("payment");
 const output_6 = document.getElementById("intrest");
 const bord = document.querySelector('.bord');
 bord.style.display = 'block';
+if(!x || !y || !z){
+     output.textContent = "Something is wrong"
+     return;
+}
+
+if (x < 10000 || x > 100000) {
+    output.textContent = "Loan amount must be between 10,000 and 100,000.";
+    return;
+}
+
+if (y < 10 || y > 1000) {
+    output.textContent = "duration amount must be between 10 and 1,000.";
+    return;
+}
+
+if (z < 1000 || z > 50000) {
+    output.textContent = "saary amount must be between 1,000 and 50,000.";
+    return;
+}
 if(selected){
 const loanType = selected.value;
 switch(loanType){
@@ -36,9 +55,7 @@ switch(loanType){
             output_6.textContent = "" ;
             output_4.textContent = "";
         }
-        else if(!x || !y || !z){
-            output.textContent = "Something is wrong"
-        }
+
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
         output_2.textContent = "Loan ammount Is :" + x;
@@ -72,9 +89,7 @@ switch(loanType){
             output_6.textContent = "" ;
             output_4.textContent = "";
         }
-        else if(!x || !y || !z){
-            output.textContent = "Something is wrong"
-        }
+
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
         output_2.textContent = "Loan ammount Is :" + x;
@@ -109,9 +124,7 @@ switch(loanType){
             output_4.textContent = "";
             output.textContent = "Your too Broke Change Something"
         }
-        else if(!x || !y || !z){
-            output.textContent = "Something is wrong"
-        }
+
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
         output_2.textContent = "Loan ammount Is :" + x;
@@ -148,6 +161,7 @@ switch(loanType){
         }
         else if(!x || !y || !z){
             output.textContent = "Something is wrong"
+            return;
         }
         else{
         output_3.textContent = "Loan Type Is :" + loanType;
@@ -177,9 +191,6 @@ switch(loanType){
        if(mensualite > z * 0.4){
             
             output.textContent = "Your too Broke Change Something"
-        }
-        else if(!x || !y || !z){
-            output.textContent = "Something is wrong"
         }
         else{
         output_3.textContent = "Loan Type Is :" + loanType;

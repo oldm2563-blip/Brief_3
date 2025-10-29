@@ -30,14 +30,13 @@
                 <input type="radio" name="loan" id="personal" value="personal">
                 <label for="personal"><span>Personal</span></label>
                 </div>
-               
                 <div class="d-flex justify-content-center flex-column gap-3 ">
                     <h4>Loan ammount</h4>
-                <input type="number" id="loan" class="rounded-5 border-0" required>
+                <input type="number" id="loan" class="rounded-5 border-0" required min="10000" max="100000">
                     <h4>time needed (by months)</h4>
-                <input type="number" id="duration" class="rounded-5 border-0" required>
+                <input type="number" id="duration" class="rounded-5 border-0" required min="10" max="1000">
                     <h4>salary</h4>
-                <input type="number" id="salary" class="rounded-5 border-0" required>
+                <input type="number" id="salary" class="rounded-5 border-0" required min="5000" max="20000">
                 <button class="btn btn-primary rounded-5 px-4 w-25" onclick="myfunction()">Calculat</button>
                 </div>
         </div>
